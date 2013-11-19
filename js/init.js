@@ -3,18 +3,29 @@ var enrollmentApp = angular.module('enrollmentApp', []);
 enrollmentApp.service('currentInterventionService', function ($rootScope) {
 
         var interventions = [{
-            name: "Mobilyze",
             id: "mobilyze",
+            name: "Mobilyze",
             theme: "lightBlue",
+            // consentForm: "Mobilyze consent form",
+            // consentForm: "Mobilyze eligibility information",
+            phiFields: []
+            interventionManagers: [1],
+
             homePage: "Mobilyze Home Page",
             contactInformation: "Mobilyze contactUs",
-            consentForm: "Mobilyze consent form",
-            consentForm: "Mobilyze eligibility information",
             additionalResources: "more resources",
+            
+            about: "",
+            eligibilityInformation: "",
+            investigatorDescriptions: "",
+            fundingInfo : "",
+
+            manualEnrollmentSuccess : "",
+            automaticEnrollmentSuccess: "",
+            automaticEnrollmentFailure: ""        
             consentMethod: "manual",
             randomization: false,
-            interventionManagers: [1],
-            phiFields: []
+
         }];
 
 
@@ -141,8 +152,7 @@ var enrollmentSiteCtrl = function ($scope, currentInterventionService) {
         label: "LightBlue",
         name: "lightBlue",
         description: "CBITs Default",
-        previewUrl: "index.html",
-        bootstrapClass: "btn-warning"
+        previewUrl: "index.html"
     }];
     
     $scope.themeLabel = "Theme:";
